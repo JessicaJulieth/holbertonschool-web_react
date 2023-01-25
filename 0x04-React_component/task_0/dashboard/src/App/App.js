@@ -4,7 +4,7 @@ import Header from '../Header/Header'
 import Login from '../Login/Login'
 import CourseList from '../CourseList/CourseList'
 import Footer from '../Footer/Footer'
-import PropTypes from 'prop-types'; // ES6
+import PropTypes from 'prop-types';
 import { getLatestNotification } from '../utils/utils'
 
 const listCourses = [
