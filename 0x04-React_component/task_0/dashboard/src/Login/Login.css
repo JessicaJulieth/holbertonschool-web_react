@@ -1,7 +1,15 @@
-.Login-body {
-  padding: 36px 24px;
+:root {
+  --color-white: #fff;
+  --color-hb: #e1354b;
 }
 
-.Login-body input {
-  margin: 0 16px 0 8px;
+.App-body {
+  background-color: var(--color-white);
+  padding: 4rem;
+  min-height: 26rem;
+}
+
+.App-body input {
+  margin-right: 9px;
+  margin-left: 9px;
 }
