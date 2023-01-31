@@ -1,16 +1,13 @@
-.Notifications {
-    padding: 2rem;
-    border: 2px dashed #e2374c;
+.Notifications{
+    border: 2px solid #E0003C;
+    border-style: dashed;
+    padding: 10px;
 }
 
-li[data="default"] {
+ul li[data-priority='default'] {
     color: blue;
-}
-
-li[data="urgent"] {
-    color: #e2374c;
-}
-
-.Notifications button {
-    float: right;
-}
+  }
+  
+  ul li[data-priority='urgent'] {
+    color: red;
+  }

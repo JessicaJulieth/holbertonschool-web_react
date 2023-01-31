@@ -1,20 +1,24 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import assert from 'assert';
-import App from './App';
+import { shallow } from "enzyme";
+import App from "./App";
 
-it('renders properly', () => {
-  shallow(<App />);
-});
-
-it('checking renders', () => {
-  const wrapper = shallow(<App />);
-
-  const header = wrapper.find('div.App-body');
-  const body = wrapper.find('div.App-body');
-  const footer = wrapper.find('div.App-footer')
-
-  assert.equal(header.exists(), true)
-  assert.equal(body.exists(), true);
-  assert.equal(footer.exists(), true);
+describe("<App />", () => {
+  it("Test nº1 Renders without crashing", () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.exists());
+  });
+  it("Test nº2 Renders App-header", () => {
+    const wrapper = shallow(<App />);
+    wrapper.update();
+    expect(wrapper.find("div.App-header")).toHaveLength(1);
+  });
+  it("Test nº3 Renders App-body", () => {
+    const wrapper = shallow(<App />);
+    wrapper.update();
+    expect(wrapper.find("div.App-body")).toHaveLength(1);
+  });
+  it("Test nº4 Renders App-footer", () => {
+    const wrapper = shallow(<App />);
+    wrapper.update();
+    expect(wrapper.find("div.App-footer")).toHaveLength(1);
+  });
 });
